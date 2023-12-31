@@ -156,7 +156,7 @@ end;
 ---@return Lexeme
 ---@nodiscard
 function Lexer:next(skip_comments, update_previous_location)
-    skip_comments = skip_comments == nil and self.skip_comments or skip_comments;
+    skip_comments = (skip_comments == nil and self.skip_comments or skip_comments) == true;
     update_previous_location = update_previous_location == nil and true or update_previous_location;
 
     -- in skip_comments mode, we reject valid comments
