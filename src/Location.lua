@@ -1,6 +1,8 @@
 local Position = require "src.Position";
 
 ---@class (exact) Location
+---@field __index Location
+---@field new fun(arg1: Position|Location?, arg2: Position|Location|integer?): Location
 ---@field begin Position
 ---@field end_ Position
 local Location = {};

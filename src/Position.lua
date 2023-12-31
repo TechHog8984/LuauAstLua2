@@ -1,4 +1,6 @@
 ---@class (exact) Position
+---@field __index Position
+---@field new fun(line: integer, column: integer): Position
 ---@field line integer
 ---@field column integer
 local Position = {};
